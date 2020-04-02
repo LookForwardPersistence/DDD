@@ -3,7 +3,18 @@
 	</properties>
 
 	<dependencies>
-
+        <!--hibernate-->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.1.3.Final</version>
+			<!-- <classifier>testing</classifier> -->
+		</dependency>
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>el-api</artifactId>
+			<version>2.2</version>
+		</dependency>
 		<!--AOP-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
