@@ -1,0 +1,46 @@
+ <dependencies>
+
+       <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-web</artifactId>
+       </dependency>
+
+       <!--druid依赖添加-->
+       <dependency>
+           <groupId>com.alibaba</groupId>
+           <artifactId>druid-spring-boot-starter</artifactId>
+           <version>1.1.10</version>
+       </dependency>
+
+       <dependency>
+           <groupId>com.dawn.architect</groupId>
+           <artifactId>dawn-facade</artifactId>
+           <version>1.0-SNAPSHOT</version>
+       </dependency>
+       <dependency>
+           <groupId>com.dawn.conf</groupId>
+           <artifactId>dawn-conf</artifactId>
+           <version>0.0.1-SNAPSHOT</version>
+       </dependency>
+   </dependencies>
+
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+               <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>prd</id>
+        </profile>
+    </profiles>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
