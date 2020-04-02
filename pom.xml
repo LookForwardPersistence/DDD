@@ -1,0 +1,129 @@
+ <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.7.RELEASE</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <dawn.dddlib.version>5.0.0</dawn.dddlib.version>
+    </properties>
+
+    <dependencies>
+        <!--测试-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <!--drui-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.20</version>
+        </dependency>
+        <!--添加servlet的依赖-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--mockito-->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.7.19</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- DDDLIB -->
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-utils</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-domain</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-db</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-ioc-spring</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-persistence-hibernate</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-query-channel</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-spring-test</artifactId>
+            <version>${dawn.dddlib.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-persistence-jpa</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>
+      <!--  <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-cache-memcached</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-datasource-router</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-excel</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-i18n</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>
+     <!--   <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-rule-engine</artifactId>
+            <version>${dawn.dddlib.version}</version>
+        </dependency>-->
+    </dependencies>
+
+    <!-- 私服配置-->
+  
+
+    <modules>
+        <module>dawn-conf</module>
+        <module>dawn-core</module>
+        <module>dawn-application</module>
+        <module>dawn-facade</module>
+        <module>dawn-facade-impl</module>
+        <module>dawn-infra</module>
+        <module>dawn-doubbo-provider</module>
+        <module>dawn-job</module>
+        <module>dawn-web</module>
+
+    </modules>
+
+
+
+
+</project>
